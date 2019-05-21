@@ -1,0 +1,20 @@
+uart: interrupty, ale přerušitelně
+
+serial mode TEXT
+	končí enterem
+
+přepnutí na binární:
+	B\n
+
+send us
+
+
+serial interruptible
+  command processing
+
+middle position:
+1.444
+
+edges:
+1.979
+0.9879

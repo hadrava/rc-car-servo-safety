@@ -1,0 +1,15 @@
+This is simple test of servo-board input capture
+
+ - We assume, that output PWM signals are connected directly to inputs
+ - Board reports real outputs with its measurement in binary format
+
+You can look at data with command:
+	xxd /dev/ttyUSB0
+
+
+
+In single mode (only one input capture running), we can catch any signal with 1 us precision.
+Signal length may be anywhere between 1 us and 0x7FFF us (32.767 ms)
+
+If both inputs are read at the same time and they both have edges around same time, our measurement may be 1 us off.
+Minimal safe signal length is around 5 us. (We are not fast enough for signals around 2us. We can miss falling edge on one of the inputs.)
